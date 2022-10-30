@@ -1,0 +1,72 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: radial-gradient(farthest-corner at 90% -15%, #0F202D, #602080, #0F202D);
+  /*background-image: radial-gradient(farthest-corner at 90% -15%, #0F202D, #602080, #0F202D);*/
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.blob {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: -5em;
+  margin-left: 10em;
+  filter: blur(90px);
+}
+
+.name{
+  font-family: Major Mono Display;
+  font-size: 1.5em;
+  text-align: center;
+  color: #DBE4F3;
+  span{
+    color: #02fffb;
+  }
+}
+
+.animation-wrapper {
+  width: 50%;
+  padding-bottom: 50%;
+}
+  
+.sphere-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 580px;
+  height: 1px;
+  margin: -290px 0 0 -290px;
+}
+
+.sphere {
+  width: 70%;
+  margin: 5em 5.5em;
+}
+  
+.sphere path {
+  fill: url(#sphereGradient);
+  stroke-width: 1px;
+  stroke: #00BED5;
+  /*stroke: rgba(80,80,80,.35);*/
+  backface-visibility: hidden;
+}
+
+.buttons{
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  margin-top: 1em;
+}
+  
+@media (min-width: 500px) {
+  .sphere path {
+    stroke-width: .4px;
+  }
+}
