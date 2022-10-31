@@ -40,12 +40,12 @@ body {
   left: 50%;
   width: 580px;
   height: 1px;
-  margin: -290px 0 0 -290px;
+  margin: -300px 0 0 -290px;
 }
 
 .sphere {
   width: 70%;
-  margin: 5em 5.5em;
+  margin: 4.5em 5.5em;
 }
 
 .sphere path {
