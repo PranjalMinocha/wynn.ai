@@ -10,7 +10,7 @@ class CreateWynn:
 
         self.engine = pyttsx3.init()
         self.engine.startLoop(False)
-        self.engine.say("Hi! I am Wynn. Welcome to the future.")
+        self.engine.say("Welcome to the new face of Digital Security. My name is Wynn, How may I assist you?")
         self.engine.iterate()
         self.engine.endLoop()
 

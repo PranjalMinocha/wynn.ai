@@ -1,95 +1,27 @@
-<<<<<<< HEAD:static/main.scss
 
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 
 body{
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-image: radial-gradient(farthest-corner at 90% -15%, #0F202D, #602080, #0F202D);
+  background-image: radial-gradient(farthest-corner at 90% -15%, #0F202D, #030005, #0F202D);
   /*background-image: radial-gradient(farthest-corner at 90% -15%, #0F202D, #602080, #0F202D);*/
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-.blob {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  margin-top: -5em;
-  margin-left: 10em;
-  filter: blur(90px);
-}
-
-.name{
-  font-family: Major Mono Display;
-  font-size: 1.5em;
-  text-align: center;
-  color: #DBE4F3;
-  span{
-    color: #02fffb;
-  }
-}
-
-.animation-wrapper {
-  width: 50%;
-  padding-bottom: 50%;
-}
-  
-.sphere-animation {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 580px;
-  height: 1px;
-  margin: -290px 0 0 -290px;
-}
-
-.sphere {
-  width: 70%;
-  margin: 5em 5.5em;
-}
-  
-.sphere path {
-  fill: url(#sphereGradient);
-  stroke-width: 1px;
-  stroke: #00BED5;
-  /*stroke: rgba(80,80,80,.35);*/
-  backface-visibility: hidden;
-}
-
-.buttons{
-  align-items: center;
-  justify-content: center;
-  display: inline-block;
-  margin-top: 1em;
-}
-  
-@media (min-width: 500px) {
-  .sphere path {
-    stroke-width: .4px;
-  }
-=======
-
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
-
-body{
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-image: radial-gradient(farthest-corner at 90% -15%, #0F202D, #602080, #0F202D);
-  /*background-image: radial-gradient(farthest-corner at 90% -15%, #0F202D, #602080, #0F202D);*/
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+.animation-area {
+  height: 90vh;
 }
 
 .blob {
   position: relative;
   justify-content: center;
   align-items: center;
-  margin-top: -5em;
+  margin-top: -6em;
   margin-left: 10em;
   filter: blur(90px);
 }
@@ -119,28 +51,90 @@ body{
 }
 
 .sphere {
-  width: 70%;
-  margin: 4.5em 5.5em;
+  width: 60%;
+  margin: 2em 8em;
 }
   
 .sphere path {
   fill: url(#sphereGradient);
   stroke-width: 1px;
   stroke: #00BED5;
-  /*stroke: rgba(80,80,80,.35);*/
   backface-visibility: hidden;
 }
 
-.buttons{
+.buttons {
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: inline-block;
-  margin-top: 1em;
+  height: 4em;
+  width: 4em;
+  position: absolute;
+  transform: translate(-50%, 50%);
+  top: 78%;
+  left: 50%;
+  border-radius: 50%;
+  border: 1px solid lighten(rgb(3, 61, 87),8%);
+  outline: none;
+  background: radial-gradient(ellipse at center, lighten(rgb(3, 61, 87),17%), lighten(rgb(3, 61, 87),12%));
+  box-shadow: 0 15px 50px rgb(3, 61, 87),
+              0 -15px 60px lighten(rgb(3, 61, 87),30%),
+              inset 0 2px 2px lighten(rgb(3, 61, 87),20%);
+  &:active {
+    background: radial-gradient(ellipse at center, lighten(rgb(3, 61, 87),15%), lighten(rgb(3, 61, 87),10%));
+    box-shadow: 0 15px 80px rgb(3, 61, 87),
+                0 -15px 80px lighten(rgb(3, 61, 87),30%),
+                inset 0 -2px 2px lighten(rgb(3, 61, 87),10%);
+  }
+  img {
+    width: 50%;
+  }
 }
+
+button {
+  background-color: rgba(0, 0,0, 0);
+  border: none;
+}
+
+.container {
+  bottom: 0;
+  display: flex;
+  font-family: Poppins;
+  font-size: 0.75em;
+  color: white;
+  background-color: rgba(0, 0,0, 0.5);
+  width: 100vw;
+  position: absolute;
   
+
+  span {
+    font-weight: 200;
+  }
+
+  ul {
+    margin-left: 46.5%;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  
+  ul li {
+    list-style: none;
+  }
+
+  ul li a {
+    z-index: 1000;
+    display: block;
+    padding-left: 20px;;
+    width: 60px;
+    text-decoration: none;
+    font-weight: 400;
+    color: white;
+  }
+}
+
 @media (min-width: 500px) {
   .sphere path {
     stroke-width: .4px;
   }
->>>>>>> 9a72d022548fd88206fcb9018758d4cafd869160:css/main.scss
 }

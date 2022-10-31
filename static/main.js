@@ -40,7 +40,7 @@ var breathAnimation = anime({
     for (var i = 0; i < pathLength; i++) {
       aimations.push(anime({
         targets: spherePathEls[i],
-        stroke: {value: ['rgba(250,30,40,1)', 'rgba(80,80,80,.35)'], duration: 500},
+        stroke: {value: ['rgba(0,0,0,1)', 'rgba(80,80,80,.35)'], duration: 500},
         translateX: [2, -5],
         translateY: [2, -5],
         easing: 'easeOutQuad',
@@ -69,7 +69,7 @@ var introAnimation = anime.timeline({
     easing: 'easeInOutCirc',
     delay: anime.stagger(190, {direction: 'reverse'})
   },
-  duration: 2000,
+  duration: 1000,
   delay: anime.stagger(60, {direction: 'reverse'}),
   easing: 'linear'
 }, 0);
@@ -79,14 +79,13 @@ var shadowAnimation = anime({
   x1: '25%',
   x2: '25%',
   y1: '0%',
-  y2: '75%',
-  duration: 30000,
+  y2: '92.5%',
+  duration: 10000,
   easing: 'easeOutQuint',
   autoplay: false
 }, 0);
 
   introAnimation.play();
-  /*breathAnimation.play();*/
   shadowAnimation.play();
 
 
