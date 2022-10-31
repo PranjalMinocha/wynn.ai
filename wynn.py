@@ -7,24 +7,26 @@ from api_key import API_KEY
 class CreateWynn:
     def __init__(self):
         openai.api_key = API_KEY
+
         self.engine = pyttsx3.init()
+        self.engine.startLoop(False)
+        self.engine.say("Hi! I am Wynn. Welcome to the future.")
+        self.engine.iterate()
+        self.engine.endLoop()
+
         self.listener = sr.Recognizer()
         self.mic = sr.Microphone()
         self.conversation = ""
-        self.user_name = "Pranjal"
-        self.engine.say("Hi! I am Wynn. Welcome to the future.")
-        pass
+        self.user_name = "User"
 
     def listen(self):
         with self.mic as source:
             self.listener.adjust_for_ambient_noise(source, duration=0.2)
-            self.audio = self.listener.listen(source)
-        pass
-
-    def process(self):
+            audio = self.listener.listen(source)
         try:
-            user_input = self.listener.recognize_google(self.audio)
+            user_input = self.listener.recognize_google(audio)
         except:
+            user_input = ""
             pass
 
         prompt = self.user_name + ": " + user_input + "\n Wynn:"
@@ -40,6 +42,8 @@ class CreateWynn:
         return response_str
 
     def reply(self):
-        self.engine.say(self.response_str)
-        self.engine.runAndWait()
-        pass
+        self.engine.startLoop(False)
+        self.engine.say(self.response)
+        self.engine.iterate()
+        self.engine.endLoop()
+        return "success"
